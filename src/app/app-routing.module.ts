@@ -13,6 +13,7 @@ import { CryptoChipsListComponentModule } from './components/crypto-chips-list/c
 import { CryptoServiceModule } from './services/crypto.service-module';
 import { PublicHolidaysSelectComponentModule } from './components/public-holidays-select/public-holidays-select.component-module';
 import { PublicHolidaysServiceModule } from './services/public-holidays.service-module';
+import { CategoriesCheckboxListComponentModule } from './components/categories-checkbox-list/categories-checkbox-list.component-module';
 
 @NgModule({
   imports: [
@@ -31,6 +32,7 @@ import { PublicHolidaysServiceModule } from './services/public-holidays.service-
     CryptoServiceModule,
     PublicHolidaysSelectComponentModule,
     PublicHolidaysServiceModule,
+    CategoriesCheckboxListComponentModule
   ],
   exports: [RouterModule],
 })
