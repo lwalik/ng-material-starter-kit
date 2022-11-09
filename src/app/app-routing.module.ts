@@ -5,6 +5,7 @@ import { CategoriesListComponent } from './components/categories-list/categories
 import { CryptoChipsListComponent } from './components/crypto-chips-list/crypto-chips-list.component';
 import { PublicHolidaysSelectComponent } from './components/public-holidays-select/public-holidays-select.component';
 import { CategoriesCheckboxListComponent } from './components/categories-checkbox-list/categories-checkbox-list.component';
+import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -14,6 +15,7 @@ import { CryptoServiceModule } from './services/crypto.service-module';
 import { PublicHolidaysSelectComponentModule } from './components/public-holidays-select/public-holidays-select.component-module';
 import { PublicHolidaysServiceModule } from './services/public-holidays.service-module';
 import { CategoriesCheckboxListComponentModule } from './components/categories-checkbox-list/categories-checkbox-list.component-module';
+import { CategoriesMenuComponentModule } from './components/categories-menu/categories-menu.component-module';
 
 @NgModule({
   imports: [
@@ -22,7 +24,8 @@ import { CategoriesCheckboxListComponentModule } from './components/categories-c
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: CryptoChipsListComponent },
       { path: 'public-holidays', component: PublicHolidaysSelectComponent },
-      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent }
+      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
+      { path: 'categories-menu', component: CategoriesMenuComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -32,7 +35,8 @@ import { CategoriesCheckboxListComponentModule } from './components/categories-c
     CryptoServiceModule,
     PublicHolidaysSelectComponentModule,
     PublicHolidaysServiceModule,
-    CategoriesCheckboxListComponentModule
+    CategoriesCheckboxListComponentModule,
+    CategoriesMenuComponentModule
   ],
   exports: [RouterModule],
 })
