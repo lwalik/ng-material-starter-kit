@@ -7,6 +7,7 @@ import { PublicHolidaysSelectComponent } from './components/public-holidays-sele
 import { CategoriesCheckboxListComponent } from './components/categories-checkbox-list/categories-checkbox-list.component';
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 import { ProductsTableComponent } from './components/products-table/products-table.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -18,6 +19,7 @@ import { PublicHolidaysServiceModule } from './services/public-holidays.service-
 import { CategoriesCheckboxListComponentModule } from './components/categories-checkbox-list/categories-checkbox-list.component-module';
 import { CategoriesMenuComponentModule } from './components/categories-menu/categories-menu.component-module';
 import { ProductsTableComponentModule } from './components/products-table/products-table.component-module';
+import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 
 @NgModule({
   imports: [
@@ -32,6 +34,7 @@ import { ProductsTableComponentModule } from './components/products-table/produc
       },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'product-search', component: ProductsTableComponent },
+      { path: 'create-product', component: ProductFormComponent },
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -44,6 +47,7 @@ import { ProductsTableComponentModule } from './components/products-table/produc
     CategoriesCheckboxListComponentModule,
     CategoriesMenuComponentModule,
     ProductsTableComponentModule,
+    ProductFormComponentModule,
   ],
   exports: [RouterModule],
 })
