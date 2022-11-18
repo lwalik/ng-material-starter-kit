@@ -11,6 +11,6 @@ export interface UserModel {
     street: string;
     number: number;
     zipcode: string;
-    phone: string;
   };
+  readonly phone: string;
 }
