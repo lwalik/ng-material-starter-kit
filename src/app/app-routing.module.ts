@@ -9,6 +9,7 @@ import { CategoriesMenuComponent } from './components/categories-menu/categories
 import { ProductsTableComponent } from './components/products-table/products-table.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -23,6 +24,8 @@ import { ProductsTableComponentModule } from './components/products-table/produc
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
 import { EmployeeFormComponentModule } from './components/employee-form/employee-form.component-module';
 import { EmployeesServiceModule } from './services/employees.service-module';
+import { LoginFormComponentModule } from './components/login-form/login-form.component-module';
+import {UsersServiceModule} from "./services/users.service-module";
 
 @NgModule({
   imports: [
@@ -35,7 +38,8 @@ import { EmployeesServiceModule } from './services/employees.service-module';
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'product-search', component: ProductsTableComponent },
       { path: 'create-product', component: ProductFormComponent },
-      { path: 'create-employee', component: EmployeeFormComponent }
+      { path: 'create-employee', component: EmployeeFormComponent },
+      { path: 'login', component: LoginFormComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -50,7 +54,9 @@ import { EmployeesServiceModule } from './services/employees.service-module';
     ProductsTableComponentModule,
     ProductFormComponentModule,
     EmployeeFormComponentModule,
-    EmployeesServiceModule
+    EmployeesServiceModule,
+    LoginFormComponentModule,
+    UsersServiceModule
   ],
   exports: [RouterModule],
 })
