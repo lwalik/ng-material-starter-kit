@@ -8,6 +8,7 @@ import { CategoriesCheckboxListComponent } from './components/categories-checkbo
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 import { ProductsTableComponent } from './components/products-table/products-table.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
+import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -20,6 +21,8 @@ import { CategoriesCheckboxListComponentModule } from './components/categories-c
 import { CategoriesMenuComponentModule } from './components/categories-menu/categories-menu.component-module';
 import { ProductsTableComponentModule } from './components/products-table/products-table.component-module';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
+import { EmployeeFormComponentModule } from './components/employee-form/employee-form.component-module';
+import { EmployeesServiceModule } from './services/employees.service-module';
 
 @NgModule({
   imports: [
@@ -28,13 +31,11 @@ import { ProductFormComponentModule } from './components/product-form/product-fo
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: CryptoChipsListComponent },
       { path: 'public-holidays', component: PublicHolidaysSelectComponent },
-      {
-        path: 'checkbox-categories',
-        component: CategoriesCheckboxListComponent,
-      },
+      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'product-search', component: ProductsTableComponent },
       { path: 'create-product', component: ProductFormComponent },
+      { path: 'create-employee', component: EmployeeFormComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -48,7 +49,9 @@ import { ProductFormComponentModule } from './components/product-form/product-fo
     CategoriesMenuComponentModule,
     ProductsTableComponentModule,
     ProductFormComponentModule,
+    EmployeeFormComponentModule,
+    EmployeesServiceModule
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
