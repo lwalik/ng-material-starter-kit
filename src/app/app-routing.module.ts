@@ -12,6 +12,7 @@ import { EmployeeFormComponent } from './components/employee-form/employee-form.
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CatFactsDetailsComponent } from './components/cat-facts-details/cat-facts-details.component';
+import { AgePredictionCardComponent } from './components/age-prediction-card/age-prediction-card.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -31,6 +32,8 @@ import { UsersServiceModule } from './services/users.service-module';
 import { RegisterComponentModule } from './components/register/register.component-module';
 import { CatFactsDetailsComponentModule } from './components/cat-facts-details/cat-facts-details.component-module';
 import { CatFactsServiceModule } from './services/cat-facts.service-module';
+import { AgePredictionCardComponentModule } from './components/age-prediction-card/age-prediction-card.component-module';
+import { AgePredictionServiceModule } from './services/age-prediction.service-module';
 
 @NgModule({
   imports: [
@@ -46,7 +49,8 @@ import { CatFactsServiceModule } from './services/cat-facts.service-module';
       { path: 'create-employee', component: EmployeeFormComponent },
       { path: 'login', component: LoginFormComponent },
       { path: 'register', component: RegisterComponent },
-      { path: 'cat-facts', component: CatFactsDetailsComponent }
+      { path: 'cat-facts', component: CatFactsDetailsComponent },
+      { path: 'age/:name', component: AgePredictionCardComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -66,7 +70,9 @@ import { CatFactsServiceModule } from './services/cat-facts.service-module';
     UsersServiceModule,
     RegisterComponentModule,
     CatFactsDetailsComponentModule,
-    CatFactsServiceModule
+    CatFactsServiceModule,
+    AgePredictionCardComponentModule,
+    AgePredictionServiceModule
   ],
   exports: [RouterModule],
 })
