@@ -11,6 +11,7 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CatFactsDetailsComponent } from './components/cat-facts-details/cat-facts-details.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -28,6 +29,8 @@ import { EmployeesServiceModule } from './services/employees.service-module';
 import { LoginFormComponentModule } from './components/login-form/login-form.component-module';
 import { UsersServiceModule } from './services/users.service-module';
 import { RegisterComponentModule } from './components/register/register.component-module';
+import { CatFactsDetailsComponentModule } from './components/cat-facts-details/cat-facts-details.component-module';
+import { CatFactsServiceModule } from './services/cat-facts.service-module';
 
 @NgModule({
   imports: [
@@ -42,7 +45,8 @@ import { RegisterComponentModule } from './components/register/register.componen
       { path: 'create-product', component: ProductFormComponent },
       { path: 'create-employee', component: EmployeeFormComponent },
       { path: 'login', component: LoginFormComponent },
-      { path: 'register', component: RegisterComponent }
+      { path: 'register', component: RegisterComponent },
+      { path: 'cat-facts', component: CatFactsDetailsComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -60,7 +64,9 @@ import { RegisterComponentModule } from './components/register/register.componen
     EmployeesServiceModule,
     LoginFormComponentModule,
     UsersServiceModule,
-    RegisterComponentModule
+    RegisterComponentModule,
+    CatFactsDetailsComponentModule,
+    CatFactsServiceModule
   ],
   exports: [RouterModule],
 })
