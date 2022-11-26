@@ -13,6 +13,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { RegisterComponent } from './components/register/register.component';
 import { CatFactsDetailsComponent } from './components/cat-facts-details/cat-facts-details.component';
 import { AgePredictionCardComponent } from './components/age-prediction-card/age-prediction-card.component';
+import { ProductDetailsCardComponent } from './components/product-details-card/product-details-card.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -34,6 +35,8 @@ import { CatFactsDetailsComponentModule } from './components/cat-facts-details/c
 import { CatFactsServiceModule } from './services/cat-facts.service-module';
 import { AgePredictionCardComponentModule } from './components/age-prediction-card/age-prediction-card.component-module';
 import { AgePredictionServiceModule } from './services/age-prediction.service-module';
+import { ProductDetailsCardComponentModule } from './components/product-details-card/product-details-card.component-module';
+import { ProductDetailsServiceModule } from './services/product-details.service-module';
 
 @NgModule({
   imports: [
@@ -50,7 +53,8 @@ import { AgePredictionServiceModule } from './services/age-prediction.service-mo
       { path: 'login', component: LoginFormComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'cat-facts', component: CatFactsDetailsComponent },
-      { path: 'age/:name', component: AgePredictionCardComponent }
+      { path: 'age/:name', component: AgePredictionCardComponent },
+      { path: 'product/:id', component: ProductDetailsCardComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -72,7 +76,9 @@ import { AgePredictionServiceModule } from './services/age-prediction.service-mo
     CatFactsDetailsComponentModule,
     CatFactsServiceModule,
     AgePredictionCardComponentModule,
-    AgePredictionServiceModule
+    AgePredictionServiceModule,
+    ProductDetailsCardComponentModule,
+    ProductDetailsServiceModule
   ],
   exports: [RouterModule],
 })
