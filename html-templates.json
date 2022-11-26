@@ -100,6 +100,10 @@
     "title-description": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "<h1>{{ $itemVariable$ }}</h1>\n<p>{{ $itemVariable$ }}</p>"
+    },
+    "activity-card": {
+      "container": "<mat-card class=\"example-card\" *ngIf=\"$detailVariable$ | async as $itemVariable$\">\n<mat-card-header>\n<div mat-card-avatar class=\"example-header-image\"></div>\n<mat-card-title>$title$</mat-card-title>\n<mat-card-subtitle>$subtitle$</mat-card-subtitle>\n</mat-card-header>\n<mat-card-content>\n<p>$content$</p>\n</mat-card-content>\n</mat-card>",
+      "content": "<h2>{{ $itemVariable$ }}</h2>\n<p>{{ $itemVariable$ }}</p>"
     }
   }
 }
