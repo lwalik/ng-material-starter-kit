@@ -16,6 +16,7 @@ import { AgePredictionCardComponent } from './components/age-prediction-card/age
 import { ProductDetailsCardComponent } from './components/product-details-card/product-details-card.component';
 import { CartDetailsCardComponent } from './components/cart-details-card/cart-details-card.component';
 import { UserDetailsCardComponent } from './components/user-details-card/user-details-card.component';
+import { ActivityCardComponent } from './components/activity-card/activity-card.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -42,6 +43,8 @@ import { ProductDetailsServiceModule } from './services/product-details.service-
 import { CartDetailsCardComponentModule } from './components/cart-details-card/cart-details-card.component-module';
 import { CartServiceModule } from './services/cart.service-module';
 import { UserDetailsCardComponentModule } from './components/user-details-card/user-details-card.component-module';
+import { ActivityCardComponentModule } from './components/activity-card/activity-card.component-module';
+import { ActivityServiceModule } from './services/activity.service-module';
 
 @NgModule({
   imports: [
@@ -61,7 +64,8 @@ import { UserDetailsCardComponentModule } from './components/user-details-card/u
       { path: 'age/:name', component: AgePredictionCardComponent },
       { path: 'product/:id', component: ProductDetailsCardComponent },
       { path: 'cart/:id', component: CartDetailsCardComponent },
-      { path: 'user/:id', component: UserDetailsCardComponent }
+      { path: 'user/:id', component: UserDetailsCardComponent },
+      { path: 'activity', component: ActivityCardComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -88,7 +92,9 @@ import { UserDetailsCardComponentModule } from './components/user-details-card/u
     ProductDetailsServiceModule,
     CartDetailsCardComponentModule,
     CartServiceModule,
-    UserDetailsCardComponentModule
+    UserDetailsCardComponentModule,
+    ActivityCardComponentModule,
+    ActivityServiceModule
   ],
   exports: [RouterModule],
 })
