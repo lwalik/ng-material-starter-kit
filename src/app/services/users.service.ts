@@ -20,4 +20,10 @@ export class UsersService {
       .post<UserModel>('https://fakestoreapi.com/users', user)
       .pipe(map(() => void 0));
   }
+
+  getOne(id: string): Observable<UserModel> {
+    return this._httpClient.get<UserModel>(
+      `https://fakestoreapi.com/users/${id}`
+    );
+  }
 }
