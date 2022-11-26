@@ -1,0 +1,6 @@
+<mat-card>
+  <mat-card-title>Cart</mat-card-title>
+  <mat-card-content>
+    <ng-container *ngIf="cart$ | async as item">You have {{ item.products.length }} products in the cart</ng-container>
+  </mat-card-content>
+</mat-card>
