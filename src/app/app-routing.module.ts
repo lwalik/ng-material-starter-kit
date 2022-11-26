@@ -15,6 +15,7 @@ import { CatFactsDetailsComponent } from './components/cat-facts-details/cat-fac
 import { AgePredictionCardComponent } from './components/age-prediction-card/age-prediction-card.component';
 import { ProductDetailsCardComponent } from './components/product-details-card/product-details-card.component';
 import { CartDetailsCardComponent } from './components/cart-details-card/cart-details-card.component';
+import { UserDetailsCardComponent } from './components/user-details-card/user-details-card.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -40,6 +41,7 @@ import { ProductDetailsCardComponentModule } from './components/product-details-
 import { ProductDetailsServiceModule } from './services/product-details.service-module';
 import { CartDetailsCardComponentModule } from './components/cart-details-card/cart-details-card.component-module';
 import { CartServiceModule } from './services/cart.service-module';
+import { UserDetailsCardComponentModule } from './components/user-details-card/user-details-card.component-module';
 
 @NgModule({
   imports: [
@@ -48,10 +50,7 @@ import { CartServiceModule } from './services/cart.service-module';
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: CryptoChipsListComponent },
       { path: 'public-holidays', component: PublicHolidaysSelectComponent },
-      {
-        path: 'checkbox-categories',
-        component: CategoriesCheckboxListComponent,
-      },
+      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'product-search', component: ProductsTableComponent },
       { path: 'create-product', component: ProductFormComponent },
@@ -62,6 +61,7 @@ import { CartServiceModule } from './services/cart.service-module';
       { path: 'age/:name', component: AgePredictionCardComponent },
       { path: 'product/:id', component: ProductDetailsCardComponent },
       { path: 'cart/:id', component: CartDetailsCardComponent },
+      { path: 'user/:id', component: UserDetailsCardComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -88,7 +88,8 @@ import { CartServiceModule } from './services/cart.service-module';
     ProductDetailsServiceModule,
     CartDetailsCardComponentModule,
     CartServiceModule,
+    UserDetailsCardComponentModule
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
