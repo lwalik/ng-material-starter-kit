@@ -17,6 +17,7 @@ import { ProductDetailsCardComponent } from './components/product-details-card/p
 import { CartDetailsCardComponent } from './components/cart-details-card/cart-details-card.component';
 import { UserDetailsCardComponent } from './components/user-details-card/user-details-card.component';
 import { ActivityCardComponent } from './components/activity-card/activity-card.component';
+import { FilteredListOfProductsComponent } from './components/filtered-list-of-products/filtered-list-of-products.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -45,6 +46,7 @@ import { CartServiceModule } from './services/cart.service-module';
 import { UserDetailsCardComponentModule } from './components/user-details-card/user-details-card.component-module';
 import { ActivityCardComponentModule } from './components/activity-card/activity-card.component-module';
 import { ActivityServiceModule } from './services/activity.service-module';
+import { FilteredListOfProductsComponentModule } from './components/filtered-list-of-products/filtered-list-of-products.component-module';
 
 @NgModule({
   imports: [
@@ -53,7 +55,10 @@ import { ActivityServiceModule } from './services/activity.service-module';
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: CryptoChipsListComponent },
       { path: 'public-holidays', component: PublicHolidaysSelectComponent },
-      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
+      {
+        path: 'checkbox-categories',
+        component: CategoriesCheckboxListComponent,
+      },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'product-search', component: ProductsTableComponent },
       { path: 'create-product', component: ProductFormComponent },
@@ -65,7 +70,11 @@ import { ActivityServiceModule } from './services/activity.service-module';
       { path: 'product/:id', component: ProductDetailsCardComponent },
       { path: 'cart/:id', component: CartDetailsCardComponent },
       { path: 'user/:id', component: UserDetailsCardComponent },
-      { path: 'activity', component: ActivityCardComponent }
+      { path: 'activity', component: ActivityCardComponent },
+      {
+        path: 'products/:category',
+        component: FilteredListOfProductsComponent,
+      },
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -94,8 +103,9 @@ import { ActivityServiceModule } from './services/activity.service-module';
     CartServiceModule,
     UserDetailsCardComponentModule,
     ActivityCardComponentModule,
-    ActivityServiceModule
+    ActivityServiceModule,
+    FilteredListOfProductsComponentModule,
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
