@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProductListComponent } from './components/products-list/product-list.component';
 import { CategoriesListComponent } from './components/categories-list/categories-list.component';
 import { CryptoChipsListComponent } from './components/crypto-chips-list/crypto-chips-list.component';
 import { PublicHolidaysSelectComponent } from './components/public-holidays-select/public-holidays-select.component';
@@ -18,6 +17,7 @@ import { CartDetailsCardComponent } from './components/cart-details-card/cart-de
 import { UserDetailsCardComponent } from './components/user-details-card/user-details-card.component';
 import { ActivityCardComponent } from './components/activity-card/activity-card.component';
 import { FilteredListOfProductsComponent } from './components/filtered-list-of-products/filtered-list-of-products.component';
+import { SortedListOfProductsComponent } from './components/sorted-list-of-products/sorted-list-of-products.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -47,18 +47,15 @@ import { UserDetailsCardComponentModule } from './components/user-details-card/u
 import { ActivityCardComponentModule } from './components/activity-card/activity-card.component-module';
 import { ActivityServiceModule } from './services/activity.service-module';
 import { FilteredListOfProductsComponentModule } from './components/filtered-list-of-products/filtered-list-of-products.component-module';
+import { SortedListOfProductsComponentModule } from './components/sorted-list-of-products/sorted-list-of-products.component-module';
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      // { path: 'products', component: ProductListComponent },
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: CryptoChipsListComponent },
       { path: 'public-holidays', component: PublicHolidaysSelectComponent },
-      {
-        path: 'checkbox-categories',
-        component: CategoriesCheckboxListComponent,
-      },
+      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'product-search', component: ProductsTableComponent },
       { path: 'create-product', component: ProductFormComponent },
@@ -71,10 +68,8 @@ import { FilteredListOfProductsComponentModule } from './components/filtered-lis
       { path: 'cart/:id', component: CartDetailsCardComponent },
       { path: 'user/:id', component: UserDetailsCardComponent },
       { path: 'activity', component: ActivityCardComponent },
-      {
-        path: 'products',
-        component: FilteredListOfProductsComponent,
-      },
+      { path: 'products', component: FilteredListOfProductsComponent },
+      { path: 'sorted-products', component: SortedListOfProductsComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -105,7 +100,8 @@ import { FilteredListOfProductsComponentModule } from './components/filtered-lis
     ActivityCardComponentModule,
     ActivityServiceModule,
     FilteredListOfProductsComponentModule,
+    SortedListOfProductsComponentModule
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
