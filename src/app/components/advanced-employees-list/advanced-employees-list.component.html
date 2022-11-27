@@ -1,6 +1,16 @@
 <mat-card>
   <mat-card-title></mat-card-title>
   <mat-card-content>
+    <mat-selection-list role="list" fxLayout="row" [multiple]="false">
+      <mat-list-option role="listoption" *ngFor="let item of orders$ | async" [value]="item" (click)="sort(item)">
+        {{item}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-title></mat-card-title>
+  <mat-card-content>
     <mat-list role="list">
       <mat-list-item role="listitem" *ngFor="let item of employees$ | async">
         <img *ngIf="item.profileImage" [src]="item.profileImage" alt="...ups">
