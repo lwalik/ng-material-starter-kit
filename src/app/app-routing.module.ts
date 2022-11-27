@@ -18,6 +18,7 @@ import { UserDetailsCardComponent } from './components/user-details-card/user-de
 import { ActivityCardComponent } from './components/activity-card/activity-card.component';
 import { FilteredListOfProductsComponent } from './components/filtered-list-of-products/filtered-list-of-products.component';
 import { SortedListOfProductsComponent } from './components/sorted-list-of-products/sorted-list-of-products.component';
+import { AdvancedEmployeesListComponent } from './components/advanced-employees-list/advanced-employees-list.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -48,6 +49,7 @@ import { ActivityCardComponentModule } from './components/activity-card/activity
 import { ActivityServiceModule } from './services/activity.service-module';
 import { FilteredListOfProductsComponentModule } from './components/filtered-list-of-products/filtered-list-of-products.component-module';
 import { SortedListOfProductsComponentModule } from './components/sorted-list-of-products/sorted-list-of-products.component-module';
+import { AdvancedEmployeesListComponentModule } from './components/advanced-employees-list/advanced-employees-list.component-module';
 
 @NgModule({
   imports: [
@@ -69,7 +71,8 @@ import { SortedListOfProductsComponentModule } from './components/sorted-list-of
       { path: 'user/:id', component: UserDetailsCardComponent },
       { path: 'activity', component: ActivityCardComponent },
       { path: 'products', component: FilteredListOfProductsComponent },
-      { path: 'sorted-products', component: SortedListOfProductsComponent }
+      { path: 'sorted-products', component: SortedListOfProductsComponent },
+      { path: 'employees', component: AdvancedEmployeesListComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -100,7 +103,8 @@ import { SortedListOfProductsComponentModule } from './components/sorted-list-of
     ActivityCardComponentModule,
     ActivityServiceModule,
     FilteredListOfProductsComponentModule,
-    SortedListOfProductsComponentModule
+    SortedListOfProductsComponentModule,
+    AdvancedEmployeesListComponentModule
   ],
   exports: [RouterModule],
 })

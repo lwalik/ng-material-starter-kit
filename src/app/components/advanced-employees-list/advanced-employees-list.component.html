@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-title></mat-card-title>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of employees$ | async">
+        <img *ngIf="item.profileImage" [src]="item.profileImage" alt="...ups">
+        <p>Name: {{ item.name }} Age: {{ item.age }} Salary: {{ item.salary }}</p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

@@ -28,6 +28,7 @@ export class EmployeeFormComponent {
         name: employeeForm.value.name,
         salary: employeeForm.value.salary,
         age: employeeForm.value.age,
+        profileImage: ''
       })
       .subscribe();
   }
