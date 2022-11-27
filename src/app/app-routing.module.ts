@@ -51,7 +51,7 @@ import { FilteredListOfProductsComponentModule } from './components/filtered-lis
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      { path: 'products', component: ProductListComponent },
+      // { path: 'products', component: ProductListComponent },
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: CryptoChipsListComponent },
       { path: 'public-holidays', component: PublicHolidaysSelectComponent },
@@ -72,7 +72,7 @@ import { FilteredListOfProductsComponentModule } from './components/filtered-lis
       { path: 'user/:id', component: UserDetailsCardComponent },
       { path: 'activity', component: ActivityCardComponent },
       {
-        path: 'products/:category',
+        path: 'products',
         component: FilteredListOfProductsComponent,
       },
     ]),
