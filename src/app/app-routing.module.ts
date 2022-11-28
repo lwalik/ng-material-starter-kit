@@ -19,6 +19,7 @@ import { ActivityCardComponent } from './components/activity-card/activity-card.
 import { FilteredListOfProductsComponent } from './components/filtered-list-of-products/filtered-list-of-products.component';
 import { SortedListOfProductsComponent } from './components/sorted-list-of-products/sorted-list-of-products.component';
 import { AdvancedEmployeesListComponent } from './components/advanced-employees-list/advanced-employees-list.component';
+import { BeersListWithPaginationComponent } from './components/beers-list-with-pagination/beers-list-with-pagination.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -50,6 +51,8 @@ import { ActivityServiceModule } from './services/activity.service-module';
 import { FilteredListOfProductsComponentModule } from './components/filtered-list-of-products/filtered-list-of-products.component-module';
 import { SortedListOfProductsComponentModule } from './components/sorted-list-of-products/sorted-list-of-products.component-module';
 import { AdvancedEmployeesListComponentModule } from './components/advanced-employees-list/advanced-employees-list.component-module';
+import { BeersListWithPaginationComponentModule } from './components/beers-list-with-pagination/beers-list-with-pagination.component-module';
+import { BeersServiceModule } from './services/beers.service-module';
 
 @NgModule({
   imports: [
@@ -72,7 +75,8 @@ import { AdvancedEmployeesListComponentModule } from './components/advanced-empl
       { path: 'activity', component: ActivityCardComponent },
       { path: 'products', component: FilteredListOfProductsComponent },
       { path: 'sorted-products', component: SortedListOfProductsComponent },
-      { path: 'employees', component: AdvancedEmployeesListComponent }
+      { path: 'employees', component: AdvancedEmployeesListComponent },
+      { path: 'beers', component: BeersListWithPaginationComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -104,7 +108,9 @@ import { AdvancedEmployeesListComponentModule } from './components/advanced-empl
     ActivityServiceModule,
     FilteredListOfProductsComponentModule,
     SortedListOfProductsComponentModule,
-    AdvancedEmployeesListComponentModule
+    AdvancedEmployeesListComponentModule,
+    BeersListWithPaginationComponentModule,
+    BeersServiceModule
   ],
   exports: [RouterModule],
 })
