@@ -15,6 +15,11 @@ interface EmployeeResponse {
   }[]
 }
 
+interface RemoveEmployeeResponse {
+  status: string;
+  message: string;
+}
+
 @Injectable()
 export class EmployeesService {
   constructor(private _httpClient: HttpClient) { }
@@ -39,5 +44,9 @@ export class EmployeesService {
         }
       }))
     );
+  }
+
+  delete(id: number): Observable<RemoveEmployeeResponse> {
+    return this._httpClient.delete<RemoveEmployeeResponse>(`https://dummy.restapiexample.com/api/v1/delete/${id}`);
   }
 }
