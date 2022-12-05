@@ -20,6 +20,7 @@ import { FilteredListOfProductsComponent } from './components/filtered-list-of-p
 import { SortedListOfProductsComponent } from './components/sorted-list-of-products/sorted-list-of-products.component';
 import { AdvancedEmployeesListComponent } from './components/advanced-employees-list/advanced-employees-list.component';
 import { BeersListWithPaginationComponent } from './components/beers-list-with-pagination/beers-list-with-pagination.component';
+import { RemoveProductListComponent } from './components/remove-product-list/remove-product-list.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -53,6 +54,7 @@ import { SortedListOfProductsComponentModule } from './components/sorted-list-of
 import { AdvancedEmployeesListComponentModule } from './components/advanced-employees-list/advanced-employees-list.component-module';
 import { BeersListWithPaginationComponentModule } from './components/beers-list-with-pagination/beers-list-with-pagination.component-module';
 import { BeersServiceModule } from './services/beers.service-module';
+import { RemoveProductListComponentModule } from './components/remove-product-list/remove-product-list.component-module';
 
 @NgModule({
   imports: [
@@ -76,7 +78,8 @@ import { BeersServiceModule } from './services/beers.service-module';
       { path: 'products', component: FilteredListOfProductsComponent },
       { path: 'sorted-products', component: SortedListOfProductsComponent },
       { path: 'employees', component: AdvancedEmployeesListComponent },
-      { path: 'beers', component: BeersListWithPaginationComponent }
+      { path: 'beers', component: BeersListWithPaginationComponent },
+      { path: 'refresh-products', component: RemoveProductListComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -110,7 +113,8 @@ import { BeersServiceModule } from './services/beers.service-module';
     SortedListOfProductsComponentModule,
     AdvancedEmployeesListComponentModule,
     BeersListWithPaginationComponentModule,
-    BeersServiceModule
+    BeersServiceModule,
+    RemoveProductListComponentModule
   ],
   exports: [RouterModule],
 })

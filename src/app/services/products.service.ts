@@ -15,4 +15,8 @@ export class ProductsService {
   create(product: Omit<ProductModel, 'id'>): Observable<ProductModel> {
     return this._httpClient.post<ProductModel>('https://fakestoreapi.com/products', product);
   }
+
+  delete(id: number): Observable<ProductModel> {
+    return this._httpClient.delete<ProductModel>(`https://fakestoreapi.com/products/${id}`);
+  }
 }
