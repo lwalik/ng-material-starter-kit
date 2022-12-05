@@ -24,7 +24,7 @@ interface RemoveEmployeeResponse {
 export class EmployeesService {
   constructor(private _httpClient: HttpClient) { }
 
-  create(employee: EmployeeModel): Observable<void> {
+  create(employee: Omit<EmployeeModel, 'id'>): Observable<void> {
     return this._httpClient
       .post<EmployeeModel>(
         'https://dummy.restapiexample.com/api/v1/create',
@@ -37,6 +37,7 @@ export class EmployeesService {
     return this._httpClient.get<EmployeeResponse>('https://dummy.restapiexample.com/api/v1/employees').pipe(
       map((response: EmployeeResponse) => response.data.map((employee) => {
         return {
+          id: +employee.id,
           name: employee.employee_name,
           salary: employee.employee_salary,
           age: employee.employee_age,
