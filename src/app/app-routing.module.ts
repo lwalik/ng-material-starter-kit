@@ -22,6 +22,7 @@ import { AdvancedEmployeesListComponent } from './components/advanced-employees-
 import { BeersListWithPaginationComponent } from './components/beers-list-with-pagination/beers-list-with-pagination.component';
 import { RemoveProductListComponent } from './components/remove-product-list/remove-product-list.component';
 import { RemoveEmployeeListComponent } from './components/remove-employee-list/remove-employee-list.component';
+import { SearchProductListComponent } from './components/search-product-list/search-product-list.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -57,6 +58,7 @@ import { BeersListWithPaginationComponentModule } from './components/beers-list-
 import { BeersServiceModule } from './services/beers.service-module';
 import { RemoveProductListComponentModule } from './components/remove-product-list/remove-product-list.component-module';
 import { RemoveEmployeeListComponentModule } from './components/remove-employee-list/remove-employee-list.component-module';
+import { SearchProductListComponentModule } from './components/search-product-list/search-product-list.component-module';
 
 @NgModule({
   imports: [
@@ -64,7 +66,10 @@ import { RemoveEmployeeListComponentModule } from './components/remove-employee-
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: CryptoChipsListComponent },
       { path: 'public-holidays', component: PublicHolidaysSelectComponent },
-      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
+      {
+        path: 'checkbox-categories',
+        component: CategoriesCheckboxListComponent,
+      },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'product-search', component: ProductsTableComponent },
       { path: 'create-product', component: ProductFormComponent },
@@ -82,7 +87,11 @@ import { RemoveEmployeeListComponentModule } from './components/remove-employee-
       { path: 'employees', component: AdvancedEmployeesListComponent },
       { path: 'beers', component: BeersListWithPaginationComponent },
       { path: 'refresh-products', component: RemoveProductListComponent },
-      { path: 'refresh-employees', component: RemoveEmployeeListComponent }
+      { path: 'refresh-employees', component: RemoveEmployeeListComponent },
+      {
+        path: 'ex-9-search-product-list',
+        component: SearchProductListComponent,
+      },
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -118,8 +127,9 @@ import { RemoveEmployeeListComponentModule } from './components/remove-employee-
     BeersListWithPaginationComponentModule,
     BeersServiceModule,
     RemoveProductListComponentModule,
-    RemoveEmployeeListComponentModule
+    RemoveEmployeeListComponentModule,
+    SearchProductListComponentModule,
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
