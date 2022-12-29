@@ -23,6 +23,7 @@ import { BeersListWithPaginationComponent } from './components/beers-list-with-p
 import { RemoveProductListComponent } from './components/remove-product-list/remove-product-list.component';
 import { RemoveEmployeeListComponent } from './components/remove-employee-list/remove-employee-list.component';
 import { SearchProductListComponent } from './components/search-product-list/search-product-list.component';
+import { UniversitiesListSearchComponent } from './components/universities-list-search/universities-list-search.component';
 import { ProductListComponentModule } from './components/products-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoriesListComponentModule } from './components/categories-list/categories-list.component-module';
@@ -59,6 +60,7 @@ import { BeersServiceModule } from './services/beers.service-module';
 import { RemoveProductListComponentModule } from './components/remove-product-list/remove-product-list.component-module';
 import { RemoveEmployeeListComponentModule } from './components/remove-employee-list/remove-employee-list.component-module';
 import { SearchProductListComponentModule } from './components/search-product-list/search-product-list.component-module';
+import { UniversitiesListSearchComponentModule } from './components/universities-list-search/universities-list-search.component-module';
 
 @NgModule({
   imports: [
@@ -66,10 +68,7 @@ import { SearchProductListComponentModule } from './components/search-product-li
       { path: 'categories', component: CategoriesListComponent },
       { path: 'crypto', component: CryptoChipsListComponent },
       { path: 'public-holidays', component: PublicHolidaysSelectComponent },
-      {
-        path: 'checkbox-categories',
-        component: CategoriesCheckboxListComponent,
-      },
+      { path: 'checkbox-categories', component: CategoriesCheckboxListComponent },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'product-search', component: ProductsTableComponent },
       { path: 'create-product', component: ProductFormComponent },
@@ -88,10 +87,8 @@ import { SearchProductListComponentModule } from './components/search-product-li
       { path: 'beers', component: BeersListWithPaginationComponent },
       { path: 'refresh-products', component: RemoveProductListComponent },
       { path: 'refresh-employees', component: RemoveEmployeeListComponent },
-      {
-        path: 'ex-9-search-product-list',
-        component: SearchProductListComponent,
-      },
+      { path: 'ex-9-search-product-list', component: SearchProductListComponent },
+      { path: 'ex-universities-list-search', component: UniversitiesListSearchComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -129,7 +126,8 @@ import { SearchProductListComponentModule } from './components/search-product-li
     RemoveProductListComponentModule,
     RemoveEmployeeListComponentModule,
     SearchProductListComponentModule,
+    UniversitiesListSearchComponentModule
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

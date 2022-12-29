@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-title>University Search</mat-card-title>
+  <mat-card-content
+    ><form
+      [formGroup]="searchForm"
+      (ngSubmit)="onSearchFormSubmitted(searchForm)"
+    >
+      <div>
+        <mat-form-field appearance="fill"
+          ><mat-label>Country</mat-label
+          ><input
+            matInput
+            type="text"
+            placeholder="Country"
+            formControlName="country"
+            required
+          /><mat-error *ngIf="searchForm.get('country')!.invalid"
+            >country is invalid</mat-error
+          ></mat-form-field
+        >
+      </div>
+    </form></mat-card-content
+  >
+</mat-card>
+<mat-card>
+  <mat-card-content *ngIf="list$ | async as list">
+    <mat-list role="list" *ngIf="list.universities.length > 0; else emptyState">
+      <mat-list-item role="listitem" *ngFor="let item of list.universities">
+        {{ item.name }}
+      </mat-list-item>
+    </mat-list>
+
+    <ng-template #emptyState>
+      <div *ngIf="list.statusCode === 0; else notFound">
+        Type any valid country in a searchbox above
+      </div>
+
+      <ng-template #notFound>
+        Did not find any universities for this country :(
+      </ng-template>
+    </ng-template>
+  </mat-card-content>
+</mat-card>
